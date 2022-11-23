@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import * as XLSX from 'xlsx';
 
 import SearchCep from './Components/CEP/SearchCep';
 import ListCEP from './Components/CEP/ListCEP';
@@ -13,13 +14,21 @@ const App = () => {
     console.log(newCEP)
   }
 
+  const handleExport = () => {
+    const wb = XLSX.utils.book_new()
+    const ws = XLSX.utils.json_to_sheet(newCEP)
+
+    XLSX.utils.book_append_sheet(wb, ws, 'TabelaCEPs')
+    XLSX.writeFile(wb, 'NovaTabelaCEPs.xlsx')
+  }
+
   return (
     <>
       <div className={classes.teste}>
-      <div className={classes.line}>
-        <SearchCep items={newCEP} onGetCEP={addCEPDataList} />
-        <ListCEP items={newCEP} />   
-      </div>        
+        <div className={classes.line}>
+          <SearchCep items={newCEP} onGetCEP={addCEPDataList} />
+          <ListCEP items={newCEP} onExport={handleExport} />   
+        </div>        
       </div>
     </>
   );

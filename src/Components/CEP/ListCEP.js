@@ -5,7 +5,11 @@ import styles from './ListCEP.module.css';
 const ListCEP = (props) => {
     return (
         <ul className={styles.list_cep}>
-            <h3>ENDEREÇOS</h3>
+            <div className={styles.header_table}>
+                <h3>ENDEREÇOS</h3>
+                <button onClick={props.onExport}>exportar</button>
+            </div>
+            
             <table>
                 <tr>
                     <th>CEP</th>
@@ -34,7 +38,8 @@ const ListCEP = (props) => {
                         )
                     })
                 } 
-            </table>            
+            </table>   
+                     
         </ul>
     )
 }
