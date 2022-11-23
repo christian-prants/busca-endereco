@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/busca-endereco/static/css/main.58a3eed6.css",
+    "main.js": "/busca-endereco/static/js/main.eaef1eba.js",
+    "index.html": "/busca-endereco/index.html",
+    "main.58a3eed6.css.map": "/busca-endereco/static/css/main.58a3eed6.css.map",
+    "main.eaef1eba.js.map": "/busca-endereco/static/js/main.eaef1eba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58a3eed6.css",
+    "static/js/main.eaef1eba.js"
+  ]
+}
