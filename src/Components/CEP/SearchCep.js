@@ -12,7 +12,7 @@ const SearchCep = (props) => {
     }
 
     const buscarCEP = async () => {
-        const urlAPI = `http://viacep.com.br/ws/${inputCEP}/json/`
+        const urlAPI = `https://viacep.com.br/ws/${inputCEP}/json/`
 
         if (inputCEP === 0 || inputCEP.length < 8) {
             alert("O campo CEP deve ser preenchido corretamente.")
